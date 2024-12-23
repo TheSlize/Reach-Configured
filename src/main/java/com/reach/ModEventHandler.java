@@ -10,5 +10,10 @@ public class ModEventHandler {
         EntityPlayer player = event.player;
         player.getEntityAttribute(EntityPlayer.REACH_DISTANCE).setBaseValue(CommonConfig.reach);
     }
+    @SubscribeEvent
+    public void onRespawnPlayer(PlayerEvent.PlayerRespawnEvent event) {
+        EntityPlayer player = event.player;
+        player.getEntityAttribute(EntityPlayer.REACH_DISTANCE).setBaseValue(CommonConfig.reach);
+    }
 
 }
